@@ -1,0 +1,12 @@
+name: Hello CI Pipeline
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print a greeting
+        run: echo "✅ Hello from GitHub Actions! The pipeline is alive."
