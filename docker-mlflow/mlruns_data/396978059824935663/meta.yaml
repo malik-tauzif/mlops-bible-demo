@@ -1,0 +1,6 @@
+artifact_location: file:///app/mlruns/396978059824935663
+creation_time: 1782001340817
+experiment_id: '396978059824935663'
+last_update_time: 1782001340817
+lifecycle_stage: active
+name: hospital-readmission-prediction

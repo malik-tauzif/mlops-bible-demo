@@ -1,0 +1,15 @@
+artifact_uri: file:///app/mlruns/396978059824935663/00466f4ae44c49d4abae109f6f07130c/artifacts
+end_time: 1782002326652
+entry_point_name: ''
+experiment_id: '396978059824935663'
+lifecycle_stage: active
+run_id: 00466f4ae44c49d4abae109f6f07130c
+run_name: docker_RF_run
+run_uuid: 00466f4ae44c49d4abae109f6f07130c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782002323670
+status: 3
+tags: []
+user_id: root
