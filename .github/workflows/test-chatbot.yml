@@ -15,7 +15,21 @@ jobs:
           cd llmops-demo
           docker build -t chatbot-api .
           docker run -d -p 8001:8001 --name test-chat chatbot-api
-          sleep 10
+
+      - name: Wait for the API to actually be ready
+        run: |
+          for i in $(seq 1 30); do
+            if curl -s http://127.0.0.1:8001/ > /dev/null; then
+              echo "API is ready after $i attempts"
+              break
+            fi
+            echo "Waiting for API... attempt $i"
+            sleep 5
+          done
+
+      - name: Show container logs (helps debugging if anything still fails)
+        if: always()
+        run: docker logs test-chat
 
       - name: Test root endpoint responds
         run: curl --fail http://127.0.0.1:8001/
