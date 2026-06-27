@@ -12,6 +12,7 @@ jobs:
 
       - name: Build and run container
         run: |
+          cd llmops-demo
           docker build -t chatbot-api .
           docker run -d -p 8001:8001 --name test-chat chatbot-api
           sleep 10
